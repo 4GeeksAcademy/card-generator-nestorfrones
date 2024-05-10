@@ -56,7 +56,6 @@ window.onload = () => {
   cardButton.addEventListener("click", () => {
     location.reload();
   });
-
   cardRandom.appendChild(cardBody);
   card.appendChild(cardButton);
 };

@@ -16,6 +16,7 @@ body {
   width: 500px;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 5%;
 }
 
@@ -48,4 +49,9 @@ body {
 
 .red {
   color: red;
+}
+
+.btn {
+  font-size: 20px;
+  margin-top: 10px;
 }

@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { Button } from "bootstrap";
 import "./style.css";
 
 const cardNumbers = [
@@ -20,7 +21,7 @@ const cardNumbers = [
 const cardsSuit = ["♦", "♥", "♠", "♣"];
 
 window.onload = () => {
-  const cardNumber = document.getElementById("card");
+  const cardRandom = document.getElementById("card");
 
   let randomCardSuit = cardsSuit[Math.floor(Math.random() * 4)];
   let randomCardNumbers = cardNumbers[Math.floor(Math.random() * 12)];
@@ -42,6 +43,20 @@ window.onload = () => {
     <div class="suitDown"><i class="suitDownImg">${randomCardSuit}</i></div>
   `;
   }
+  const cardButton = document.createElement("button");
+  cardButton.innerHTML = "Change";
+  cardButton.classList.add(
+    "btn",
+    "btn-danger",
+    "d-flex",
+    "position-absolute",
+    "top-100",
+    "start-0"
+  );
+  cardButton.addEventListener("click", () => {
+    location.reload();
+  });
 
-  cardNumber.appendChild(cardBody);
+  cardRandom.appendChild(cardBody);
+  card.appendChild(cardButton);
 };
